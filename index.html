@@ -1,56 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+  <meta charset="UTF-8">
+  <title>Happy Birthday Bestie! 🎂✨</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #ffecf7);
+      text-align: center;
+      padding: 50px;
+      color: #444;
+    }
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="https://glitch.com/favicon.ico" />
+    h1 {
+      font-size: 3rem;
+      color: #ff5fa2;
+      animation: float 3s ease-in-out infinite;
+    }
 
-  <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-  <title>Hello World!</title>
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
 
-  <!-- The website stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 70%;
+      margin: auto;
+      animation: fade 2s ease;
+    }
 
-  <!-- The website JavaScript file -->
-  <script src="/script.js" defer></script>
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    button {
+      background: #ff5fa2;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff2f85;
+    }
+  </style>
 </head>
 
 <body>
-  <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-  <div class="wrapper">
-    <div class="content" role="main">
-      <h1 class="title">Oh hi website!</h1>
-      <img src="/cool-website.svg" class="illustration" alt="cool website" />
-      <div class="instructions">
-        <p>
-          Fork <a href="https://github.com/glitchdotcom/website-to-compute">this project</a> and open it in a GitHub Codespace.
-        </p>
-        <p> Follow the steps in the README to deploy your new website to Fastly in a few steps!
-        </p>
 
-      </div>
+  <h1>🎉 Happy Birthday Bestie! 🎉</h1>
 
-      <footer class="footer">
-        <div>
-          <a class="remix" href="https://github.com/glitchdotcom/website-to-compute">🚧 Get your own site</a>
-        </div>
-      </footer>
-    </div>
+  <div class="card">
+    <p>Dear bestie,</p>
+    <p>You’re the brightest, funniest, kindest person ever.  
+       I made this little website just for you — hope it makes you smile 💗</p>
+
+    <button onclick="showMessage()">Click me 🎀</button>
+    <p id="secret" style="display:none; margin-top:15px; font-size:1.2rem;">
+      🌸 You're my favorite human — enjoy your day!! 🌸
+    </p>
   </div>
-</body>
 
+  <script>
+    function showMessage() {
+      document.getElementById('secret').style.display = 'block';
+    }
+  </script>
+
+</body>
 </html>
